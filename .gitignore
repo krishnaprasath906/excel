@@ -1,0 +1,8 @@
+# Dependencies and generated Next.js output
+node_modules/
+.next/
+out/
+
+# Local runtime files
+*.log
+*.pid
