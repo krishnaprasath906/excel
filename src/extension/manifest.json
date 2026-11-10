@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Excel AutoFill - Smart Form Assistant",
+  "version": "1.0.0",
+  "description": "Smart cross-site autofill engine connecting Excel datasets with target web forms securely with manual review enforcement.",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Excel AutoFill"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["contentScript.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
